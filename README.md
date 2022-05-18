@@ -2,15 +2,26 @@
 
 insta user profile clone
 
-## Getting Started
+## Environment setup
 
-This project is a starting point for a Flutter application.
+To generate the environment variables for the application run the following command
 
-A few resources to get you started if this is your first Flutter project:
+```
+flutter pub run environment_config:generate --config=env_config.yaml
+```
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+To run using an extension, eg. `dev` to use a local server run
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```
+flutter pub run environment_config:generate --config=env_config.yaml --config-extension=dev
+```
+
+## In order to generate any code with build runner please run the following
+
+flutter pub run build_runner build --delete-conflicting-outputs
+
+Please make sure to include
+
+--no-sound-null-safety
+
+in Run arguments for flutter run and flutter build
