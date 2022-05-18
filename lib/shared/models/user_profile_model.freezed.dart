@@ -24,6 +24,7 @@ mixin _$UserProfileModel {
   String get firstName => throw _privateConstructorUsedError;
   String get lastName => throw _privateConstructorUsedError;
   String get username => throw _privateConstructorUsedError;
+  String? get profileImageUrl => throw _privateConstructorUsedError;
   int? get following => throw _privateConstructorUsedError;
   int? get followers => throw _privateConstructorUsedError;
   int? get likes => throw _privateConstructorUsedError;
@@ -46,6 +47,7 @@ abstract class $UserProfileModelCopyWith<$Res> {
       String firstName,
       String lastName,
       String username,
+      String? profileImageUrl,
       int? following,
       int? followers,
       int? likes,
@@ -68,6 +70,7 @@ class _$UserProfileModelCopyWithImpl<$Res>
     Object? firstName = freezed,
     Object? lastName = freezed,
     Object? username = freezed,
+    Object? profileImageUrl = freezed,
     Object? following = freezed,
     Object? followers = freezed,
     Object? likes = freezed,
@@ -91,6 +94,10 @@ class _$UserProfileModelCopyWithImpl<$Res>
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
               as String,
+      profileImageUrl: profileImageUrl == freezed
+          ? _value.profileImageUrl
+          : profileImageUrl // ignore: cast_nullable_to_non_nullable
+              as String?,
       following: following == freezed
           ? _value.following
           : following // ignore: cast_nullable_to_non_nullable
@@ -127,6 +134,7 @@ abstract class _$$_UserProfileModelCopyWith<$Res>
       String firstName,
       String lastName,
       String username,
+      String? profileImageUrl,
       int? following,
       int? followers,
       int? likes,
@@ -151,6 +159,7 @@ class __$$_UserProfileModelCopyWithImpl<$Res>
     Object? firstName = freezed,
     Object? lastName = freezed,
     Object? username = freezed,
+    Object? profileImageUrl = freezed,
     Object? following = freezed,
     Object? followers = freezed,
     Object? likes = freezed,
@@ -174,6 +183,10 @@ class __$$_UserProfileModelCopyWithImpl<$Res>
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
               as String,
+      profileImageUrl: profileImageUrl == freezed
+          ? _value.profileImageUrl
+          : profileImageUrl // ignore: cast_nullable_to_non_nullable
+              as String?,
       following: following == freezed
           ? _value.following
           : following // ignore: cast_nullable_to_non_nullable
@@ -206,6 +219,7 @@ class _$_UserProfileModel implements _UserProfileModel {
       required this.firstName,
       required this.lastName,
       required this.username,
+      this.profileImageUrl,
       this.following = 0,
       this.followers = 0,
       this.likes = 0,
@@ -225,6 +239,8 @@ class _$_UserProfileModel implements _UserProfileModel {
   final String lastName;
   @override
   final String username;
+  @override
+  final String? profileImageUrl;
   @override
   @JsonKey()
   final int? following;
@@ -256,7 +272,7 @@ class _$_UserProfileModel implements _UserProfileModel {
 
   @override
   String toString() {
-    return 'UserProfileModel(id: $id, firstName: $firstName, lastName: $lastName, username: $username, following: $following, followers: $followers, likes: $likes, likedItems: $likedItems, myPosts: $myPosts)';
+    return 'UserProfileModel(id: $id, firstName: $firstName, lastName: $lastName, username: $username, profileImageUrl: $profileImageUrl, following: $following, followers: $followers, likes: $likes, likedItems: $likedItems, myPosts: $myPosts)';
   }
 
   @override
@@ -268,6 +284,8 @@ class _$_UserProfileModel implements _UserProfileModel {
             const DeepCollectionEquality().equals(other.firstName, firstName) &&
             const DeepCollectionEquality().equals(other.lastName, lastName) &&
             const DeepCollectionEquality().equals(other.username, username) &&
+            const DeepCollectionEquality()
+                .equals(other.profileImageUrl, profileImageUrl) &&
             const DeepCollectionEquality().equals(other.following, following) &&
             const DeepCollectionEquality().equals(other.followers, followers) &&
             const DeepCollectionEquality().equals(other.likes, likes) &&
@@ -284,6 +302,7 @@ class _$_UserProfileModel implements _UserProfileModel {
       const DeepCollectionEquality().hash(firstName),
       const DeepCollectionEquality().hash(lastName),
       const DeepCollectionEquality().hash(username),
+      const DeepCollectionEquality().hash(profileImageUrl),
       const DeepCollectionEquality().hash(following),
       const DeepCollectionEquality().hash(followers),
       const DeepCollectionEquality().hash(likes),
@@ -307,6 +326,7 @@ abstract class _UserProfileModel implements UserProfileModel {
       required final String firstName,
       required final String lastName,
       required final String username,
+      final String? profileImageUrl,
       final int? following,
       final int? followers,
       final int? likes,
@@ -324,6 +344,8 @@ abstract class _UserProfileModel implements UserProfileModel {
   String get lastName => throw _privateConstructorUsedError;
   @override
   String get username => throw _privateConstructorUsedError;
+  @override
+  String? get profileImageUrl => throw _privateConstructorUsedError;
   @override
   int? get following => throw _privateConstructorUsedError;
   @override

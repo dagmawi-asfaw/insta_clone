@@ -1,7 +1,9 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'models.dart';
 
 part 'user_profile_model.freezed.dart';
+
 part 'user_profile_model.g.dart';
 
 @freezed
@@ -11,6 +13,7 @@ class UserProfileModel with _$UserProfileModel {
     required String firstName,
     required String lastName,
     required String username,
+    String? profileImageUrl,
     @Default(0) int? following,
     @Default(0) int? followers,
     @Default(0) int? likes,
