@@ -25,3 +25,7 @@ Please make sure to include
 --no-sound-null-safety
 
 in Run arguments for flutter run and flutter build
+
+## App Screen
+
+![Screenshot](docs/app_screenshot.jpg)
