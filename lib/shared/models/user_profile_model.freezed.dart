@@ -24,7 +24,7 @@ mixin _$UserProfileModel {
   String get firstName => throw _privateConstructorUsedError;
   String get lastName => throw _privateConstructorUsedError;
   String get username => throw _privateConstructorUsedError;
-  String? get profileImageUrl => throw _privateConstructorUsedError;
+  String get profileImageUrl => throw _privateConstructorUsedError;
   int? get following => throw _privateConstructorUsedError;
   int? get followers => throw _privateConstructorUsedError;
   int? get likes => throw _privateConstructorUsedError;
@@ -47,7 +47,7 @@ abstract class $UserProfileModelCopyWith<$Res> {
       String firstName,
       String lastName,
       String username,
-      String? profileImageUrl,
+      String profileImageUrl,
       int? following,
       int? followers,
       int? likes,
@@ -97,7 +97,7 @@ class _$UserProfileModelCopyWithImpl<$Res>
       profileImageUrl: profileImageUrl == freezed
           ? _value.profileImageUrl
           : profileImageUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       following: following == freezed
           ? _value.following
           : following // ignore: cast_nullable_to_non_nullable
@@ -134,7 +134,7 @@ abstract class _$$_UserProfileModelCopyWith<$Res>
       String firstName,
       String lastName,
       String username,
-      String? profileImageUrl,
+      String profileImageUrl,
       int? following,
       int? followers,
       int? likes,
@@ -186,7 +186,7 @@ class __$$_UserProfileModelCopyWithImpl<$Res>
       profileImageUrl: profileImageUrl == freezed
           ? _value.profileImageUrl
           : profileImageUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       following: following == freezed
           ? _value.following
           : following // ignore: cast_nullable_to_non_nullable
@@ -219,7 +219,7 @@ class _$_UserProfileModel implements _UserProfileModel {
       required this.firstName,
       required this.lastName,
       required this.username,
-      this.profileImageUrl,
+      required this.profileImageUrl,
       this.following = 0,
       this.followers = 0,
       this.likes = 0,
@@ -240,7 +240,7 @@ class _$_UserProfileModel implements _UserProfileModel {
   @override
   final String username;
   @override
-  final String? profileImageUrl;
+  final String profileImageUrl;
   @override
   @JsonKey()
   final int? following;
@@ -326,7 +326,7 @@ abstract class _UserProfileModel implements UserProfileModel {
       required final String firstName,
       required final String lastName,
       required final String username,
-      final String? profileImageUrl,
+      required final String profileImageUrl,
       final int? following,
       final int? followers,
       final int? likes,
@@ -345,7 +345,7 @@ abstract class _UserProfileModel implements UserProfileModel {
   @override
   String get username => throw _privateConstructorUsedError;
   @override
-  String? get profileImageUrl => throw _privateConstructorUsedError;
+  String get profileImageUrl => throw _privateConstructorUsedError;
   @override
   int? get following => throw _privateConstructorUsedError;
   @override

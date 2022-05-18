@@ -5,7 +5,7 @@ import 'widget_constants.dart';
 
 ThemeData appThemeData = ThemeData(
   primaryColor: AppColors.kPrimaryColor,
-  scaffoldBackgroundColor: AppColors.kScaffoldColor,
+  scaffoldBackgroundColor: AppColors.kBlack,
   appBarTheme: AppBarTheme(
     elevation: 0,
     centerTitle: true,

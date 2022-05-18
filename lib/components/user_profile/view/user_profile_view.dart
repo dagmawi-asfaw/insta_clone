@@ -1,5 +1,5 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:insta_clone/components/user_profile/user_profile.dart';
 
 import '../../../shared/shared.dart';
 
@@ -15,15 +15,30 @@ class UserProfilePage extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          CircleAvatar(
-            radius: 40,
-            child: CachedNetworkImage(
-              height: 15,
-              width: 15,
-
-              imageUrl: user1.profileImageUrl!,
-            ),
-          )
+          const SizedBox(
+            height: 20,
+          ),
+          UserAvatarWidget(
+            imageUrl: user1.profileImageUrl,
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          Text(
+            "${user1.firstName} ${user1.lastName}",
+            style: Theme.of(context).textTheme.bodyTextStyle1,
+          ),
+          const SizedBox(
+            height: 5,
+          ),
+          Text(
+            "@${user1.username}",
+            style: Theme.of(context).textTheme.bodyTextStyle2,
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          EditProfileButtonWidget(),
         ],
       ),
     );

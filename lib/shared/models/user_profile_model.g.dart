@@ -12,7 +12,7 @@ _$_UserProfileModel _$$_UserProfileModelFromJson(Map<String, dynamic> json) =>
       firstName: json['firstName'] as String,
       lastName: json['lastName'] as String,
       username: json['username'] as String,
-      profileImageUrl: json['profileImageUrl'] as String?,
+      profileImageUrl: json['profileImageUrl'] as String,
       following: json['following'] as int? ?? 0,
       followers: json['followers'] as int? ?? 0,
       likes: json['likes'] as int? ?? 0,
