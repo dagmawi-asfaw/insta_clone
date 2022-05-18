@@ -3,10 +3,10 @@ import 'package:insta_clone/components/user_profile/widgets/post_widget.dart';
 
 import '../../../shared/shared.dart';
 
-class MyPostsWidget extends StatelessWidget {
+class PostGridViewWidget extends StatelessWidget {
   final List<PostModel> posts;
 
-  const MyPostsWidget({
+  const PostGridViewWidget({
     Key? key,
     required this.posts,
   }) : super(key: key);
@@ -15,7 +15,6 @@ class MyPostsWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GridView.count(
       crossAxisCount: 3,
-   //   physics: const NeverScrollableScrollPhysics(),
       children: posts
           .map<Widget>(
             (e) => PostWidget(postModel: e),

@@ -16,8 +16,10 @@ class PostWidget extends StatelessWidget {
     return Stack(
       children: [
         Container(
-          width: 200,
-          height: 250,
+          constraints: const BoxConstraints(
+            minHeight: 250,
+            minWidth: 200,
+          ),
           child: CachedNetworkImage(
             fit: BoxFit.fill,
             imageUrl: postModel.imageUrl,
@@ -31,6 +33,7 @@ class PostWidget extends StatelessWidget {
             children: [
               CircleAvatar(
                 radius: 14,
+                backgroundColor: AppColors.kPrimaryColor,
                 backgroundImage: CachedNetworkImageProvider(postModel.icon!),
               ),
               const SizedBox(

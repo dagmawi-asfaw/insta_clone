@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:insta_clone/components/user_profile/user_profile.dart';
-import 'package:insta_clone/components/user_profile/widgets/my_posts_widget.dart';
+import 'package:insta_clone/components/user_profile/widgets/post_grid_view_widget.dart';
 
 import '../../../shared/shared.dart';
 
@@ -67,13 +67,12 @@ class _UserProfileTabBarWidgetState extends State<UserProfileTabBarWidget>
           child: TabBarView(
             controller: _controller,
             children: [
-              MyPostsWidget(
+              PostGridViewWidget(
                 posts: widget.userProfileModel.myPosts!,
               ),
-              Container(
-                height: 100,
-                color: Colors.blue,
-              )
+              PostGridViewWidget(
+                posts: widget.userProfileModel.likedItems!,
+              ),
             ],
           ),
         )
