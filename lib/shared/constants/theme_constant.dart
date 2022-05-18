@@ -16,6 +16,7 @@ ThemeData appThemeData = ThemeData(
       ),
     ),
   ),
+
 );
 
 ButtonStyle kPrimaryButtonStyle = ButtonStyle(
