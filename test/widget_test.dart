@@ -7,6 +7,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:insta_clone/app.dart';
 
 import 'package:insta_clone/main.dart';
 
