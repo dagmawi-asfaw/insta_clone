@@ -19,10 +19,10 @@ extension CustomTextTheme on TextTheme {
     );
   }
 
-  TextStyle get bodyTextStyle3Black {
+  TextStyle get bodyTextStyle3 {
     return const TextStyle(
-      fontSize: 18.0,
-      color: AppColors.kBlack,
+      fontSize: 14.0,
+      color: AppColors.kWhite,
       fontWeight: FontWeight.w500,
     );
   }

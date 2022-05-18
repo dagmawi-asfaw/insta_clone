@@ -16,8 +16,10 @@ class UserProfilePage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           UserProfileDataWidget(userProfileModel: user1),
-          const Expanded(
-            child: UserProfileTabBarWidget(),
+          Expanded(
+            child: UserProfileTabBarWidget(
+              userProfileModel: user1,
+            ),
           )
         ],
       ),

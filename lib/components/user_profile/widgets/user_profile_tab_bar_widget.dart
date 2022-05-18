@@ -1,12 +1,16 @@
-
 import 'package:flutter/material.dart';
 import 'package:insta_clone/components/user_profile/user_profile.dart';
-import 'package:simple_icons/simple_icons.dart';
+import 'package:insta_clone/components/user_profile/widgets/my_posts_widget.dart';
 
 import '../../../shared/shared.dart';
 
 class UserProfileTabBarWidget extends StatefulWidget {
-  const UserProfileTabBarWidget({Key? key}) : super(key: key);
+  final UserProfileModel userProfileModel;
+
+  const UserProfileTabBarWidget({
+    Key? key,
+    required this.userProfileModel,
+  }) : super(key: key);
 
   @override
   State<UserProfileTabBarWidget> createState() =>
@@ -46,7 +50,7 @@ class _UserProfileTabBarWidgetState extends State<UserProfileTabBarWidget>
             UserProfileTabItemWidget(
               isSelected: _controller.index == 1,
               label: 'Liked Items',
-                iconData: Icons.check_circle,
+              iconData: Icons.check_circle,
             ),
           ],
           onTap: (index) {
@@ -63,9 +67,8 @@ class _UserProfileTabBarWidgetState extends State<UserProfileTabBarWidget>
           child: TabBarView(
             controller: _controller,
             children: [
-              Container(
-                height: 100,
-                color: Colors.red,
+              MyPostsWidget(
+                posts: widget.userProfileModel.myPosts!,
               ),
               Container(
                 height: 100,
